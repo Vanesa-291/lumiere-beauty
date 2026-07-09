@@ -1,0 +1,114 @@
+.about-page { padding-top: 68px; }
+.about-hero { padding: 5rem 0; background: var(--rose-50); }
+.about-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.about-hero__text p { font-size: 0.95rem; color: var(--gray-700); line-height: 1.8; margin-bottom: 2rem; }
+.about-hero__img img { width: 100%; border-radius: var(--radius-lg); object-fit: cover; max-height: 480px; }
+.about-stats { padding: 3rem 0; border-bottom: 1px solid var(--rose-100); }
+.about-stats__inner {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-stat { text-align: center; }
+.about-stat strong { display: block; font-family: var(--font-display); font-size: 2.5rem; color: var(--rose-500); margin-bottom: 0.25rem; }
+.about-stat span { font-size: 0.85rem; color: var(--gray-500); }
+.about-mission { padding: 5rem 0; }
+.about-mission__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.about-mission__img img { width: 100%; border-radius: var(--radius-lg); object-fit: cover; max-height: 480px; }
+.about-mission__text p { font-size: 0.92rem; color: var(--gray-700); line-height: 1.8; margin-bottom: 1rem; }
+.about-values { padding: 5rem 0; background: var(--cream); }
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.about-value-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  border: 1px solid var(--rose-100);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.about-value-card:hover { box-shadow: var(--shadow-soft); transform: translateY(-4px); }
+.about-value-card { scroll-margin-top: 90px; }
+.about-value-card span { font-size: 2rem; display: block; margin-bottom: 1rem; }
+.about-value-card h4 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.6rem; }
+.about-value-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.7; }
+.about-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--rose-400) 0%, var(--rose-600) 100%);
+  text-align: center;
+}
+.about-cta__inner { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.about-cta h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); color: white; }
+.about-cta p { font-size: 0.95rem; color: rgba(255,255,255,0.85); max-width: 480px; }
+.about-cta .btn-rose { background: white; color: var(--rose-600); margin-top: 0.5rem; }
+.about-cta .btn-rose:hover { background: var(--charcoal); color: white; }
+@media (max-width: 768px) {
+  .about-hero__inner, .about-mission__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-values__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .about-values__grid { grid-template-columns: 1fr; }
+}
+
+/* --- Support sections: Contact / Shipping / Returns / Track / FAQs / Careers / Press --- */
+.about-support { padding: 4rem 0; }
+.about-support__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.about-support__grid--two { grid-template-columns: repeat(2, 1fr); }
+.about-support__card {
+  background: var(--rose-50);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  scroll-margin-top: 90px;
+}
+.about-support__icon { display: inline-flex; margin-bottom: 1rem; }
+.about-support__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--charcoal);
+}
+.about-support__card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; }
+
+.about-faqs { margin-top: 3rem; scroll-margin-top: 90px; }
+.about-faqs h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.about-faq-item {
+  border-bottom: 1px solid var(--gray-300);
+  padding: 1rem 0;
+}
+.about-faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--charcoal);
+  font-size: 0.98rem;
+}
+.about-faq-item p { margin-top: 0.75rem; color: var(--gray-600); font-size: 0.92rem; line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .about-support__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .about-support__grid, .about-support__grid--two { grid-template-columns: 1fr; }
+}
